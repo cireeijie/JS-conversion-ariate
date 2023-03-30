@@ -5,30 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculating Speed, Distance, and Time</title>
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 <body>
 
     <section class="calculator-section">
         <div class="calculator-container">
-            <div class="calculator-container">
-                <label for="calculate">Choose a calculation</label>
-                <select name="calculate" id="calculate" onChange="display()">
-                    <option selected disabled>--</option>
-                    <option>Speed</option>
-                    <option>Distance</option>
-                    <option>Time</option>
-                </select>
+            <div class="first-column">
+                <div class="title">
+                    <img src="assets/images/vector.png" alt="">
+                    <h1>Speed, Distance, and Time Calculator</h1>
+                </div>
+                <div class="calculate">
+                    <label for="calculate">Choose a calculation</label>
+                    <select name="calculate" id="calculate" onChange="display()">
+                        <option selected disabled>--</option>
+                        <option>Speed</option>
+                        <option>Distance</option>
+                        <option>Time</option>
+                    </select>
+                </div>
+                <div class="first-input-container">
+                    <label for="inp1" id="firstInput">Choose calculation first</label>
+                    <input type="number" id="inp1" name="inp1" onChange="display()">
+                </div>
+                <div class="second-input-container">
+                    <label for="inp1" id="secondInput">Choose calculation first</label>
+                    <input type="number" id="inp2" name="inp2" onChange="display()">
+                </div>
+                <div class="result-container">
+                    <p id="result">0.00</p>
+                </div>
             </div>
-            <div class="first-input-container">
-                <label for="inp1" id="firstInput"></label>
-                <input type="number" id="inp1" name="inp1" onChange="display()">
-            </div>
-            <div class="second-input-container">
-                <label for="inp1" id="secondInput"></label>
-                <input type="number" id="inp2" name="inp2" onChange="display()">
-            </div>
-            <div class="result-container">
-                <p id="result">0.00</p>
+            <div class="second-column">
+                <h1>Rearranging the formula</h1>
+                <p>The formula speed = distance ÷ time can be rearranged, just like any other equation.</p>
+                <p>The formula can be rearranged in three ways:</p>
+                <ul>
+                    <li>speed = distance ÷ time</li>
+                    <li>distance = speed × time</li>
+                    <li>time = distance ÷ speed</li>
+                </ul>
+                <p>To calculate one of the variables (speed, distance or time) we need the other two.</p>
+                <p>For example, to find the time taken to make a journey, we need the length of the journey and the speed of travel.</p>
             </div>
         </div>
     </section>

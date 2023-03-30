@@ -40,8 +40,8 @@ function display() {
     let inp2 = parseFloat(document.getElementById("inp2").value);
 
     if(calc === 'Speed') {
-        document.getElementById("firstInput").innerHTML = "Distance";
-        document.getElementById("secondInput").innerHTML = "Time";
+        document.getElementById("firstInput").innerHTML = "Distance(m)";
+        document.getElementById("secondInput").innerHTML = "Time(s)";
 
         if(isNaN(calcSpeed(inp1, inp2))) {
             document.getElementById("result").innerHTML = "0";
@@ -51,25 +51,25 @@ function display() {
         }
     }
     else if(calc === 'Distance') {
-        document.getElementById("firstInput").innerHTML = "Speed";
-        document.getElementById("secondInput").innerHTML = "Time";
+        document.getElementById("firstInput").innerHTML = "Speed(m/s)";
+        document.getElementById("secondInput").innerHTML = "Time(s)";
 
         if(isNaN(calcDistance(inp1, inp2))) {
             document.getElementById("result").innerHTML = "0";
         }
         else {
-            document.getElementById("result").innerHTML = calcDistance(inp1, inp2).toFixed(2);
+            document.getElementById("result").innerHTML = calcDistance(inp1, inp2).toFixed(2) + ' m';
         }
     }
     else if(calc === 'Time') {
-        document.getElementById("firstInput").innerHTML = "Distance";
-        document.getElementById("secondInput").innerHTML = "Speed";
+        document.getElementById("firstInput").innerHTML = "Distance(m)";
+        document.getElementById("secondInput").innerHTML = "Speed(s)";
 
         if(isNaN(calcTime(inp1, inp2))) {
             document.getElementById("result").innerHTML = "0";
         }
         else {
-            document.getElementById("result").innerHTML = calcTime(inp1, inp2).toFixed(2);
+            document.getElementById("result").innerHTML = calcTime(inp1, inp2).toFixed(2) + ' s';
         }
     }
     else {
