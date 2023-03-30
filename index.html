@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating Speed, Distance, and Time</title>
+</head>
+<body>
+
+    <section class="calculator-section">
+        <div class="calculator-container">
+            <div class="calculator-container">
+                <label for="calculate">Choose a calculation</label>
+                <select name="calculate" id="calculate" onChange="display()">
+                    <option selected disabled>--</option>
+                    <option>Speed</option>
+                    <option>Distance</option>
+                    <option>Time</option>
+                </select>
+            </div>
+            <div class="first-input-container">
+                <label for="inp1" id="firstInput"></label>
+                <input type="number" id="inp1" name="inp1" onChange="display()">
+            </div>
+            <div class="second-input-container">
+                <label for="inp1" id="secondInput"></label>
+                <input type="number" id="inp2" name="inp2" onChange="display()">
+            </div>
+            <div class="result-container">
+                <p id="result">0.00</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="assets/script/formula.js"></script>
+</body>
+</html>
